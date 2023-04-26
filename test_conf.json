@@ -1,0 +1,33 @@
+{
+	"expr_conf": "overhead",
+	"input_conf": {
+		"dataset": "twitter",
+		"min_batch_size": 5000,
+		"batch_num": 3
+	},
+	"system_conf": {
+		"learn_conf": {
+			"learn_duration": 24,
+			"n_clusters": 15,
+			"min_cluster_size": 50
+		},
+		"overhead_conf": {
+			"max_msg_num": 3,
+			"act_thresholds": [0.05, 0.1],
+			"dyna_sched": false
+		},
+		"anonymity_conf": {
+			"act_threshold": 0.1, 
+			"churn_rate": [0.1,0.3,0.5],
+			"max_waits": [0],
+			"min_offline": 1,
+			"max_offline": 11
+		}
+	},
+	"misc":{
+		"cache_clusters": true,
+		"cluster_cacheread": false,
+		"cluster_data_path": ""
+	}
+	
+}
