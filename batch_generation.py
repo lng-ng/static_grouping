@@ -98,7 +98,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--dataset", help="dataset name")
+    parser.add_argument("dataset", help="dataset name")
     parser.add_argument("-s", "--size", type=int, default=5000, help="Batch size")
     args = parser.parse_args()
     main(args)

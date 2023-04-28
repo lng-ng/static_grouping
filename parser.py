@@ -146,8 +146,8 @@ if __name__ == '__main__':
     ratio = -1
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--dataset", help="dataset name to create the folder for storing files")
-    parser.add_argument("-i", "--input", help="raw dataset file path")
+    parser.add_argument("dataset", choices={'twitter','reddit'}, help="dataset name to create the folder for storing files")
+    parser.add_argument("input", help="dataset file path")
     parser.add_argument("-t", "--threshold", type=int, default=10, help="Total number of messages each user have to at least send")
     parser.add_argument("-r", "--cover", type=int, default=0, help="Ratio of real:cover")
     parser.add_argument("-l", "--rlength", type=int, default=3600, help="Length of a round in seconds")
